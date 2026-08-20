@@ -42,6 +42,7 @@ noindex: true
 header_pages:
   - toc.markdown
   - log.markdown
+  - todo.markdown
 plugins:
   - jekyll-feed
 
