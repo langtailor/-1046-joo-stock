@@ -81,10 +81,10 @@
 | 표지 | `index.markdown` | `/` |
 | 목차 | `toc.markdown` | `/toc/` |
 | 1. 사업 개요 | `about.markdown` | `/about/` |
-| 2. 개발 요구 사항 | *미생성* | `/requirements/` |
-| 3. 주요 개발 수행 지침 | *미생성* | `/guidelines/` |
-| 4. 개발 일정 및 추진 체계 | *미생성* | `/schedule/` |
-| 5. 부록 | *미생성* | `/appendix/` |
+| 2. 개발 요구 사항 | `requirements.markdown` | `/requirements/` |
+| 3. 주요 개발 수행 지침 | `guidelines.markdown` | `/guidelines/` |
+| 4. 개발 일정 및 추진 체계 | `schedule.markdown` | `/schedule/` |
+| 5. 부록 | `appendix.markdown` | `/appendix/` |
 | (부속) 개발 로그 목록 | `log.markdown` | `/log/` |
 
 새 장을 만들 때는 `toc.markdown`의 항목과 **반드시 함께** 갱신합니다.
@@ -193,6 +193,6 @@ bundle exec jekyll serve --host 0.0.0.0 --port 4000
 - [x] 데모 사이트에 `noindex` 메타 적용 (`_includes/head.html` 오버라이드 + `_config.yml`의 `noindex: true`)
 - [ ] `fin.ragtailor.com` DNS 레코드 사전 생성
 - [ ] 1장 본문 확정 — 사업 목적 / 주요 사업 내용 / 기대 효과 (현재 *작성 예정* 상태)
-- [ ] 2~5장 페이지 골격 생성
+- [x] 2~5장 페이지 골격 생성 (본문은 전부 미확정 상태)
 - [ ] 실제 발주처 확인 후 표기 여부 결정
 - [ ] 생성 파일 git 커밋 (현재 전부 untracked)

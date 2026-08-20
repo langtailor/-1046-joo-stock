@@ -36,6 +36,12 @@ permalink: /log/:year/:month/:day/:title/
 # 데모 단계 검색 색인 차단. 프로덕션(fin.ragtailor.com) 전환 시 false로 변경한다.
 # _includes/head.html에서 robots 메타를 출력한다.
 noindex: true
+
+# 헤더 메뉴에 노출할 페이지와 순서. 지정하지 않으면 minima가 site.pages를
+# 순서 없이 전부 나열한다. 각 장은 목차와 장 하단 이전/다음 링크로 이동한다.
+header_pages:
+  - toc.markdown
+  - log.markdown
 plugins:
   - jekyll-feed
 

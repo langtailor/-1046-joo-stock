@@ -7,7 +7,7 @@ permalink: /toc/
 <div class="toc">
 
 <section class="toc-part">
-  <h2>1. 사업 개요</h2>
+  <h2><a href="{{ '/about/' | relative_url }}">1. 사업 개요</a></h2>
   <ol class="toc-items">
     <li>사업 목적</li>
     <li>주요 사업 내용</li>
@@ -16,7 +16,7 @@ permalink: /toc/
 </section>
 
 <section class="toc-part">
-  <h2>2. 개발 요구 사항</h2>
+  <h2><a href="{{ '/requirements/' | relative_url }}">2. 개발 요구 사항</a></h2>
   <ol class="toc-items">
     <li>목적</li>
     <li>개발 범위</li>
@@ -29,7 +29,7 @@ permalink: /toc/
 </section>
 
 <section class="toc-part">
-  <h2>3. 주요 개발 수행 지침</h2>
+  <h2><a href="{{ '/guidelines/' | relative_url }}">3. 주요 개발 수행 지침</a></h2>
   <ol class="toc-items">
     <li>일반 사항</li>
     <li>개발 표준 및 산출물</li>
@@ -38,7 +38,7 @@ permalink: /toc/
 </section>
 
 <section class="toc-part">
-  <h2>4. 개발 일정 및 추진 체계</h2>
+  <h2><a href="{{ '/schedule/' | relative_url }}">4. 개발 일정 및 추진 체계</a></h2>
   <ol class="toc-items">
     <li>단계별 개발 일정</li>
     <li>조직 구성 및 역할 분담</li>
@@ -47,7 +47,7 @@ permalink: /toc/
 </section>
 
 <section class="toc-part">
-  <h2>5. 부록</h2>
+  <h2><a href="{{ '/appendix/' | relative_url }}">5. 부록</a></h2>
   <ol class="toc-items">
     <li>용어 정의</li>
     <li>관련 서식</li>
