@@ -32,6 +32,10 @@ theme: minima
 
 # 개발 로그 URL. 카테고리(한국어)가 경로에 들어가면 퍼센트 인코딩되므로 고정 경로를 사용한다.
 permalink: /log/:year/:month/:day/:title/
+
+# 데모 단계 검색 색인 차단. 프로덕션(fin.ragtailor.com) 전환 시 false로 변경한다.
+# _includes/head.html에서 robots 메타를 출력한다.
+noindex: true
 plugins:
   - jekyll-feed
 

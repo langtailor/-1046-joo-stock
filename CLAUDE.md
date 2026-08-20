@@ -62,7 +62,7 @@
 1. `fin.ragtailor.com` DNS 레코드 생성 — **1단계 중에 미리 만들어 두면** 전파 대기 없이 컷오버 가능
 2. 리포 루트에 `CNAME` 파일 생성 → 내용 `fin.ragtailor.com`
 3. `_config.yml`의 `url` → `https://fin.ragtailor.com`
-4. `noindex` 메타 제거
+4. `_config.yml`의 `noindex: true` → `false` (메타 출력은 `_includes/head.html`이 담당)
 5. GitHub Pages 설정에서 custom domain 지정 + **Enforce HTTPS** 활성화
 6. 리포 이름 변경은 **불필요** (GitHub Pages는 리포 이름과 도메인이 달라도 동작)
 
@@ -117,7 +117,8 @@ permalink: /requirements/
 
 ### 스타일
 
-- 테마는 `minima`. 테마 파일을 직접 수정하지 말고, 페이지별 `<style>` 블록 또는 `_includes/custom-head.html`로 확장합니다.
+- 테마는 `minima` **2.5.2**. minima 2.x에는 `custom-head` 확장 지점이 **없습니다**(3.x 기능). `<head>`를 손대려면 `_includes/head.html`을 프로젝트에 두어 오버라이드해야 하며, 이미 그렇게 되어 있습니다. 그 외에는 페이지별 `<style>` 블록으로 확장합니다.
+- 테마 gem 파일 자체를 수정하지 마십시오.
 - 한글 줄바꿈이 어색해지지 않도록 제목·목차 항목에는 `word-break: keep-all`을 적용합니다.
 
 ---
@@ -189,7 +190,7 @@ bundle exec jekyll serve --host 0.0.0.0 --port 4000
 
 ## 현재 미결 항목
 
-- [ ] 데모 사이트에 `noindex` 메타 적용 (`_includes/custom-head.html`)
+- [x] 데모 사이트에 `noindex` 메타 적용 (`_includes/head.html` 오버라이드 + `_config.yml`의 `noindex: true`)
 - [ ] `fin.ragtailor.com` DNS 레코드 사전 생성
 - [ ] 1장 본문 확정 — 사업 목적 / 주요 사업 내용 / 기대 효과 (현재 *작성 예정* 상태)
 - [ ] 2~5장 페이지 골격 생성

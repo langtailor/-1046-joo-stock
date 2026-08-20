@@ -1,0 +1,19 @@
+<!--
+  minima 2.5.2의 _includes/head.html 오버라이드.
+  minima 2.x에는 custom-head 확장 지점이 없어 파일 전체를 재정의한다.
+  원본 대비 추가된 것은 아래 robots 메타 한 줄뿐이다.
+-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if site.noindex -%}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif -%}
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>
