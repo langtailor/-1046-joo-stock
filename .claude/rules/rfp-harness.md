@@ -140,7 +140,7 @@ paths:
 | :--- | :--- | :--- | :--- |
 | `SFR-001` | DART(XML/HTML) 및 SEC(10-K) 내 복합 표·텍스트 구조화 파싱 | `services/parser/` | 표 구조 복원율 95% 이상 (테스트셋 기준) |
 | `SFR-002` | Dense(임베딩) + Sparse(BM25) 앙상블 및 재순위화 | `services/rag/retriever.py` | Top-5 추출 시 Recall@5 92% 이상 |
-| `SFR-003` | 답변 근거 원문 위치 하이라이팅 및 좌표 제공 | `apps/app/` (Flutter) | 각주 클릭 시 원문 해당 위치로 auto-scroll |
+| `SFR-003` | 답변 근거 원문 위치 하이라이팅 및 좌표 제공 | `apps/app/` (Flutter · Android/iOS) | 각주 탭 시 원문 해당 위치로 auto-scroll |
 | `SFR-004` | 대화 맥락을 유지하는 멀티턴 질의응답 API | `services/api/routers/chat.py` | 이전 대화 컨텍스트 반영 질의 성공 |
 
 `SFR-001`의 95%, `SFR-004`의 성공률은 **측정 데이터셋과 판정 방법이 정의되지 않았다.**
@@ -188,8 +188,17 @@ paths:
 - 참고 자료의 **Next.js / Vercel 웹 구성은 채택하지 않는다.** 참고 자료에 Flutter가
   없다는 이유로 웹 스택을 되살리지 않는다.
 - `apps/web`·Vercel 배포·Next.js App Router 전제의 지시는 이 프로젝트에 적용하지 않는다.
-- 빌드 대상 플랫폼(iOS / Android / Web)은 아직 지정되지 않았다. 스캐폴딩 시
-  **임의로 정하지 말고 사용자에게 확인한다.**
+
+**빌드 대상은 Android / iOS 두 가지로 확정한다 (2026-08-21).**
+
+- 스캐폴딩은 `flutter create --platforms=android,ios` 로 생성한다.
+  `web`·`windows`·`macos`·`linux` 타깃을 임의로 추가하지 않는다.
+- **웹 채널이 없다.** `SFR-003`의 원문 뷰어는 브라우저 렌더링에 기대지 말고
+  모바일에서 동작하는 방식으로 설계한다. PDF/HTML 표시 방식은 2장 요구사항
+  확정 후 정한다.
+- 대민 서비스인데 웹 채널이 빠져 있다. 2장 5) 대민 서비스 플랫폼 기능에서
+  접근 채널이나 웹 접근성 요구가 나오면 **이 결정을 다시 확인해야 한다.**
+  그때까지는 Android / iOS 전제로 진행한다.
 
 ### 5.3 벡터 저장소 — Aurora PostgreSQL + pgvector 확정
 
@@ -235,7 +244,8 @@ paths:
 
 - 워크스페이스 구성: `apps/app`(Flutter), `services/api`, `services/rag`,
   `services/parser`, `infra/`
-- 클라이언트는 **Flutter**로 생성한다 (§5.2). 빌드 대상 플랫폼은 사용자에게 확인한 뒤 정한다.
+- 클라이언트는 **Flutter**로 생성한다 (§5.2).
+  `flutter create --platforms=android,ios apps/app`
 - API 서버에 CORS 미들웨어 설정 (`SER-001`)
 - 생성하는 모든 파일 상단에 요구 ID 주석 (§2.3)
 
@@ -250,7 +260,9 @@ paths:
 
 ### Task 3 — `SFR-003` 원문 하이라이트
 
-- Flutter 화면에서 답변 패널과 원문 뷰어를 나누고, 출처 클릭 시 해당 청크로 스크롤 이동
+- Flutter 화면에서 답변 패널과 원문 뷰어를 나누고, 출처 탭 시 해당 청크로 스크롤 이동
+- **모바일 화면이다.** 참고 자료의 좌우 분할(split-view)을 그대로 옮기지 말고
+  탭 전환·바텀시트 등 좁은 화면에 맞는 구성을 검토한다.
 - 상태 관리 방식은 Flutter 생태계 기준으로 선택한다. 참고 자료의 Zustand 등
   **웹 전용 라이브러리 지시는 적용하지 않는다.**
 
