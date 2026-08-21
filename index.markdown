@@ -8,8 +8,8 @@ title: 표지
   <p class="cover-doctype">개발 제안서</p>
 
   <h1 class="cover-title">
-    국가 금융데이터 미디어 자동화 및<br />
-    차세대 대민 서비스 플랫폼 구축
+    금융 공시(DART/SEC) 복합 문서 구조화 및 <br /> Hybrid RAG pipeline 구축 <br />(Latency -40%, Recall@5 92% 달성)
+  
   </h1>
 
   <p class="cover-subtitle">National Financial Data Media Automation<br />and Next-Generation Public Service Platform</p>
@@ -20,11 +20,17 @@ title: 표지
     <dt>개발 기간</dt>
     <dd>2026년 8월 20일 (목) ~ 2026년 10월 27일 (화)<br /><span class="cover-note">총 69일 / 약 10주</span></dd>
 
-    <dt>개발팀</dt>
+    <dt>개발팀 : 래그테일러 </dt>
     <dd>테일러 · 왓슨 · 앨리스 · 토마스<br /><span class="cover-note">4명</span></dd>
 
     <dt>문서 작성일</dt>
     <dd>2026년 8월 20일</dd>
+
+    <dt>깃허브 주소</dt>
+    <dd><a href="https://github.com/ragtailor/fin.ragtaylor.com">https://github.com/ragtailor/fin.ragtaylor.com</a></dd>
+
+    <dt>데모 사이트</dt>
+    <dd><a href="https://fin.ragtaylor.com">https://fin.ragtaylor.com</a></dd>
   </dl>
 
   <p class="cover-next"><a href="{{ '/toc/' | relative_url }}">목차 &rarr;</a></p>

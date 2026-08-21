@@ -6,7 +6,9 @@ permalink: /about/
 
 ## 사업명
 
-**국가 금융데이터 미디어 자동화 및 차세대 대민 서비스 플랫폼 구축**
+**금융 공시(DART/SEC) 복합 문서 구조화 및 Hybrid RAG pipeline 구축 (Latency -40%, Recall@5 92% 달성)**
+
+National Financial Data Media Automation and Next-Generation Public Service Platform
 
 ## 개발 개요
 
@@ -20,7 +22,7 @@ permalink: /about/
 
 ---
 
-## 1) 사업 목적
+## 1) 사업 목적 {#s1-1}
 
 ### 추진 배경
 
@@ -39,7 +41,7 @@ permalink: /about/
 
 ---
 
-## 2) 주요 사업 내용
+## 2) 주요 사업 내용 {#s1-2}
 
 ### 사업 범위
 
@@ -70,7 +72,7 @@ permalink: /about/
 
 ---
 
-## 3) 기대 효과
+## 3) 기대 효과 {#s1-3}
 
 ### 정량적 효과
 

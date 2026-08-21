@@ -9,48 +9,48 @@ permalink: /toc/
 <section class="toc-part">
   <h2><a href="{{ '/about/' | relative_url }}">1. 사업 개요</a></h2>
   <ol class="toc-items">
-    <li>사업 목적</li>
-    <li>주요 사업 내용</li>
-    <li>기대 효과</li>
+    <li><a href="{{ '/about/' | relative_url }}#s1-1">사업 목적</a></li>
+    <li><a href="{{ '/about/' | relative_url }}#s1-2">주요 사업 내용</a></li>
+    <li><a href="{{ '/about/' | relative_url }}#s1-3">기대 효과</a></li>
   </ol>
 </section>
 
 <section class="toc-part">
   <h2><a href="{{ '/requirements/' | relative_url }}">2. 개발 요구 사항</a></h2>
   <ol class="toc-items">
-    <li>목적</li>
-    <li>개발 범위</li>
-    <li>금융데이터 수집 및 연계</li>
-    <li>미디어 자동화 처리</li>
-    <li>대민 서비스 플랫폼 기능</li>
-    <li>시스템 아키텍처</li>
-    <li>보안 및 개인정보 보호</li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-1">목적</a></li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-2">개발 범위</a></li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-3">금융데이터 수집 및 연계</a></li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-4">미디어 자동화 처리</a></li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-5">대민 서비스 플랫폼 기능</a></li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-6">시스템 아키텍처</a></li>
+    <li><a href="{{ '/requirements/' | relative_url }}#s2-7">보안 및 개인정보 보호</a></li>
   </ol>
 </section>
 
 <section class="toc-part">
   <h2><a href="{{ '/guidelines/' | relative_url }}">3. 주요 개발 수행 지침</a></h2>
   <ol class="toc-items">
-    <li>일반 사항</li>
-    <li>개발 표준 및 산출물</li>
-    <li>품질 관리 및 테스트</li>
+    <li><a href="{{ '/guidelines/' | relative_url }}#s3-1">일반 사항</a></li>
+    <li><a href="{{ '/guidelines/' | relative_url }}#s3-2">개발 표준 및 산출물</a></li>
+    <li><a href="{{ '/guidelines/' | relative_url }}#s3-3">품질 관리 및 테스트</a></li>
   </ol>
 </section>
 
 <section class="toc-part">
   <h2><a href="{{ '/schedule/' | relative_url }}">4. 개발 일정 및 추진 체계</a></h2>
   <ol class="toc-items">
-    <li>단계별 개발 일정</li>
-    <li>조직 구성 및 역할 분담</li>
-    <li>위험 관리 방안</li>
+    <li><a href="{{ '/schedule/' | relative_url }}#s4-1">단계별 개발 일정</a><span class="toc-note">칸반 보드 · 스프린트 일정 · 스크럼 운영 규칙</span></li>
+    <li><a href="{{ '/schedule/' | relative_url }}#s4-2">조직 구성 및 역할 분담</a></li>
+    <li><a href="{{ '/schedule/' | relative_url }}#s4-3">위험 관리 방안</a></li>
   </ol>
 </section>
 
 <section class="toc-part">
   <h2><a href="{{ '/appendix/' | relative_url }}">5. 부록</a></h2>
   <ol class="toc-items">
-    <li>용어 정의</li>
-    <li>관련 서식</li>
+    <li><a href="{{ '/appendix/' | relative_url }}#s5-1">용어 정의</a></li>
+    <li><a href="{{ '/appendix/' | relative_url }}#s5-2">관련 서식</a></li>
   </ol>
 </section>
 
@@ -93,6 +93,19 @@ permalink: /toc/
   left: 0.6rem;
   opacity: 0.6;
   font-variant-numeric: tabular-nums;
+}
+.toc-items a {
+  text-decoration: none;
+}
+.toc-items a:hover {
+  text-decoration: underline;
+}
+.toc-note {
+  display: block;
+  font-size: 0.78rem;
+  opacity: 0.55;
+  margin-top: 0.1rem;
+  word-break: keep-all;
 }
 .toc-back {
   margin-top: 2.5rem;

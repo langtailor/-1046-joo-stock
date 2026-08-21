@@ -18,11 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 국가 금융데이터 미디어 자동화 및 차세대 대민 서비스 플랫폼 구축
+# 정본은 표지(index.markdown) 제목이다. about.markdown 「사업명」과 CLAUDE.md
+# 사업명은 표지 제목 전문과 일치시킨다.
+# 단 이 title만 예외로 성과 지표 괄호 "(Latency -40%, Recall@5 92% 달성)"를 뺀다.
+# 이 값은 매 페이지 헤더와 <title> 태그에 들어가는데, 전문을 쓰면 헤더가 두 줄로
+# 감기고 탭 제목이 잘린다. 의도된 차이이므로 표지 제목에 맞춰 되돌리지 말 것.
+title: 금융 공시(DART/SEC) 복합 문서 구조화 및 Hybrid RAG pipeline 구축
 email: taylor@ragtailor.com
 description: >- # this means to ignore newlines until "baseurl:"
-  국가 금융데이터의 미디어 자동화와 차세대 대민 서비스 플랫폼 구축을 위한
-  개발 제안서. 개발 기간 2026년 8월 20일 ~ 10월 27일.
+  금융 공시(DART/SEC) 복합 문서 구조화 및 Hybrid RAG pipeline 구축 개발 제안서.
+  개발 기간 2026년 8월 20일 ~ 10월 27일.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fin.ragtaylor.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ragtailor
