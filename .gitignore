@@ -3,3 +3,15 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# 실제 자격증명. 템플릿(.env.example, .env.local.example)만 커밋한다.
+.env
+.env.local
+.env.*.local
+
+# Claude Code 로컬 설정. 프로젝트 규칙인 RFP 하네스만 공유한다.
+# 빈 규칙 파일, 다른 프로젝트에서 넘어온 메모리, 이 PC 전용 훅 설정은 제외.
+.claude/*
+!.claude/rules/
+.claude/rules/*
+!.claude/rules/rfp-harness.md
